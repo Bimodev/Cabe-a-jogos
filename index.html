@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ajude o cabeça!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <button class="popup-button" type="submit" onclick="handlePopup(true)">
+                Abrir carta do cabeça
+            </button>
+
+            <div class="popup" id="popup">
+                <img src="./assets/warning.png" alt="warning">
+
+                <h2 class="title">ATENÇÃO!</h2>
+
+                <p class="desc">eu pedi minha recisão mais eu ainda estou preso dentro da pasta de "compartilhamento-operação" me ajude a sair por favor,
+                    eu preciso que vc jogues alguns minigames para me salvar dessa putaria sem fim, em todos minigames no final vc consegue um acordo meu
+                por favor colete os cincos acordos e derrote o virus "Wilma" para me libertar.</p>
+                <button class="close-popup-button" type="submit">
+                    <a href="games/carta.html">Aceitar missão</a>
+                </button>
+                <button class="close-popup-button2" type="submit" onclick="handlePopup(false)">
+                    Recusar missção
+                </button>
+            </div>
+
+        </div>
+
+        <script> 
+            const popup = document.getElementById('popup');
+
+            function handlePopup(open) {
+                popup.classList[open ? 'add' : 'remove']('opened');
+            }
+        </script>
+        
+    </body>
+</html>
